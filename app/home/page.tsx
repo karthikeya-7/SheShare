@@ -1,13 +1,13 @@
 import { Suspense, use } from "react";
 
-import { MapFilterItems } from "./Components/MapFilterItems";
-import prisma from "./lib/db";
-import { SkeltonCard } from "./Components/SkeletonCard";
-import { NoItems } from "./Components/NoItem";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { ListingCard } from "./Components/ListingCard";
+
 import { unstable_noStore as noStore } from "next/cache";
-import Hero from "./Components/Hero";
+import { MapFilterItems } from "../Components/MapFilterItems";
+import { NoItems } from "../Components/NoItem";
+import { ListingCard } from "../Components/ListingCard";
+import { SkeltonCard } from "../Components/SkeletonCard";
+import prisma from "@/app/lib/db";
 
 async function getData({
   searchParams,
@@ -90,9 +90,31 @@ async function ShowItems({
 
   return (
     <>
-     <Hero/>
-   
-    
+     
+      {data.length === 0 ? (
+        
+        <NoItems
+          description="Please check a other category or create your own listing!"
+          title="Sorry no listings found for this category..."
+        />
+      ) : (
+        <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+          {data.map((item) => (
+            <ListingCard
+              key={item.id}
+              description={item.description as string}
+              imagePath={item.photo as string}
+              location={item.country as string}
+              price={item.price as number}
+              userId={user?.id}
+              favoriteId={item.Favorite[0]?.id}
+              isInFavoriteList={item.Favorite.length > 0 ? true : false}
+              homeId={item.id}
+              pathName="/"
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 }
