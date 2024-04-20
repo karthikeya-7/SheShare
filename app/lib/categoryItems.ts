@@ -9,33 +9,33 @@ interface iAppProps {
   export const categoryItems: iAppProps[] = [
     {
       id: 0,
-      name: "beach",
+      name: "Welcome",
       description: "This Property is close to the Beach.",
-      title: "Beach",
+      title: "Welcome",
       imageUrl:
         "https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg",
     },
     {
       id: 1,
-      name: "trending",
-      description: "This is a Property which is trending.",
-      title: "Trending",
+      name: "Safety",
+      description: "This is a Properterathhomey which is trending.",
+      title: "Safety",
       imageUrl:
         "https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg",
     },
     {
       id: 2,
-      name: "beachfront",
+      name: "Adventures",
       description: "This is a Property is close to the beachfront",
-      title: "Beachfront",
+      title: "Adventures",
       imageUrl:
         "https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg",
     },
     {
       id: 3,
-      name: "erathhome",
+      name: "Community",
       description: "This Property is considerd a Earth Home",
-      title: "Earth Home",
+      title: "Community",
       imageUrl:
         "https://a0.muscache.com/pictures/d7445031-62c4-46d0-91c3-4f29f9790f7a.jpg",
     },
