@@ -24,7 +24,7 @@ export default async function Hero() {
   return (
   
     <div className="   ">
-      <HeroHighlight className="flex flex-col h-[60vh] gap-6 justify-center items-center ">
+      <HeroHighlight className="flex flex-col  w-screen h-[60vh] gap-6 justify-center items-center ">
       <h1 className="text-black  berkshire-swash-regular lg:text-7xl text-3xl font-[600] text-center">
       Create lasting memories in a space   <hr className="w-0" /> designed{" "}
         <span className="text-rose-600">for women by women.</span>

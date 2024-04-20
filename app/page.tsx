@@ -8,6 +8,11 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { ListingCard } from "./Components/ListingCard";
 import { unstable_noStore as noStore } from "next/cache";
 import Hero from "./Components/Hero";
+import Countries from "./Components/Countries";
+import Footer from "./Components/Footer";
+import { SearchModalCompnent } from "./Components/SearchComponent";
+
+
 
 async function getData({
   searchParams,
@@ -63,13 +68,19 @@ export default function Home({
   };
 }) {
   return (
-    <div className="mx-auto px-5 lg:px-10">
+    <><div className="mx-auto flex flex-col items-center  w-screen px-5 lg:px-10">
       <MapFilterItems />
+      
 
       <Suspense key={searchParams?.filter} fallback={<SkeletonLoading />}>
         <ShowItems searchParams={searchParams} />
       </Suspense>
+      
+
+     
+    
     </div>
+    <Footer/></>
   );
 }
 
@@ -91,11 +102,20 @@ async function ShowItems({
   return (
     <>
      <Hero/>
-   
+     <SearchModalCompnent />
+
+     <Countries/>
+    
+  
     
     </>
   );
 }
+
+  
+
+
+
 
 function SkeletonLoading() {
   return (

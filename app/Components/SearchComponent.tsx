@@ -27,6 +27,7 @@ import { Button } from "@/components/ui/button";
 import { CreationSubmit } from "./SubmitButtons";
 import { Card, CardHeader } from "@/components/ui/card";
 import { Counter } from "./Counter";
+import { SelectCalender } from "./SelectCalender";
 
 export function SearchModalCompnent() {
   const [step, setStep] = useState(1);
@@ -127,7 +128,9 @@ export function SearchModalCompnent() {
                       <p className="text-muted-foreground text-sm">
                         How many bathrooms do you have?
                       </p>
+
                     </div>
+                    
 
                     <Counter name="bathroom" />
                   </div>
