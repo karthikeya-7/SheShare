@@ -137,7 +137,7 @@ export function SearchModalCompnent() {
                 </CardHeader>
               </Card>
               <h1>Please select date</h1>
-              <SelectCalender reservation={undefined}/>
+              <SelectCalender reservation={undefined  }/>
             </>
           )}
 
