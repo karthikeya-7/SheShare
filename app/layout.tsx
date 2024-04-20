@@ -12,7 +12,7 @@ const inter = Karla({weight:"400",subsets:["latin"]})
 
 export const metadata: Metadata = {
   title: "SheShare",
-  description: "Vacation Rentals",
+  description: "Vacation Room Rentals",
 };
 
 export default function RootLayout({
